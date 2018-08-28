@@ -640,6 +640,9 @@ The build step is executed the first time a package is installed or when explici
 A package is built by executing the file `deps/build.jl`.
 
 ```
+shell> cat deps/build.jl 
+println("I am being built...")
+
 shell> cat deps/build.log
 I am being built...
 
@@ -654,7 +657,8 @@ I am being built...
 If the build step fails, the output of the build step is printed to the console
 
 ```
-shell> cat deps/build.jl
+shell> cat deps/
+
 error("Ooops")
 
 (HelloWorld) pkg> build
